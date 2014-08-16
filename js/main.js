@@ -469,6 +469,9 @@ $(document).ready(function($) {
     });
 
 
+  $("#btn_blog").on('click', function () {
+    window.open('http://blog.craftcode.com.br');
+  });
 
 
 });
