@@ -41,7 +41,7 @@ $(window).load(function() {
  *****************************************************/
 $(document).ready( function(){
 	
-	$.backstretch('assets/img/1.jpg');
+	$.backstretch('assets/img/red-cod.png');
 
 });
 
