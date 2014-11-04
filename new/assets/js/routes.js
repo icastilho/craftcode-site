@@ -1,7 +1,7 @@
 angular.module('siteApp', ['ngRoute'])
 
  .controller('SiteCtrl', function($scope, $routeParams) {
-    
+    $scope.sele = 'startups';
  })
 
 .config(function($routeProvider, $locationProvider) {

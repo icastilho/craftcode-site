@@ -19,8 +19,8 @@
 
 
 							<div class="hidden-xs">
-								<h4 class="nomargin">Give us a call</h4>
-								<h2>800 - 1234 567</h2>
+								<h4 class="nomargin">That’s been one of my mantras — focus and simplicity. Simple can be harder than complex; you have to work hard to get your thinking clean to make it simple.</h4>
+								<h2>Steve Jobs</h2>
 							</div>
 
 						</div>
@@ -40,8 +40,8 @@
 
 					<h2><strong>Nosso</strong> Jeito <small>de trabalhar...</small></h2>
 
-					<p class="lead">Comunicação, foco e qualidade. São nossos principais valores, queremos que a comunicação seja a mais clara possível, buscamos a confiança de nossos clientes pois queremos oferecer o nosso melhor e para oferece-lo ambas as partes precisam estar se comunicando o tempo todo.</p>
-					<p>Comunicação é indispensável para termos foco. Foco nas funcionalidades certas, com os atributos certos, com a características adequadas. Só podemos tomar tais decisões aliados aos nossos clientes pois eles sabem o que realmente devemos focar.
+					<p class="lead">Comunicação, foco e qualidade. São nossos principais valores, queremos que a comunicação seja a mais clara possível, buscamos a confiança de nossos clientes pois queremos oferecer o nosso melhor e para oferecê-lo ambas as partes precisam estar se comunicando o tempo todo.</p>
+					<p>Comunicação é indispensável para termos foco. Foco nas funcionalidades certas, com os atributos certos, com as características adequadas. Só podemos tomar tais decisões aliados aos nossos clientes pois eles sabem o que realmente devemos focar.
 					</p>
 					<p>Tudo isso para termos um produto de qualidade que é funcional e útil e não apenas um monte de funcionalidades colocadas junto. Trabalhamos de várias maneiras (Abaixo melhor descrito), a maneira que preferimos é com escopo aberto pois dessa forma não nos prendemos a um contrato e a um escopo fixo, dessa forma temos a flexibilidade de tomar as melhores decisões na hora certa!</p>
 
@@ -57,32 +57,39 @@
 							<!-- INLINE NAV -->
 							<ul class="side-nav list-group" id="sidebar-nav">
 
-								<li class="list-group-item">
-									<span class="badge">New</span>
-									<a href="#">Criação de Produto (StartUps)</a>
+								<li class="list-group-item" ng-class="{active: sele == 'startups'}">									
+									<a ng-click="sele='startups'">Criação de Produto (StartUps)</a>
+
+								<li class="list-group-item" ng-class="{active: sele == 'produto'}">   <!-- NOTE: "active" to be open on page load -->                
+									<a ng-click="sele='produto'">Produto bem Definido</a>	
 								</li>
-								<li class="list-group-item list-toggle">   <!-- NOTE: "active" to be open on page load -->                
-									<a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-1">Produto bem Definido</a>
-									<ul id="collapse-1" class="collapse"><!-- NOTE: "collapse in" to be open on page load -->
-										<li><a href="#"><i class="fa fa-sort-alpha-asc"></i> Something 1</a></li>
-										<li>
-											<span class="badge">New</span>
-											<a href="#"><i class="fa fa-flask"></i> Something 2</a>
-										</li>
-										<li><a href="#"><i class="fa fa-cog"></i> Something 3</a></li>
-									</ul>
-								</li>
-								<li class="list-group-item"><a href="#">Mobile</a></li>
-								<li class="list-group-item"><a href="#">Empresariais</a></li>
+								<li class="list-group-item" ng-class="{active: sele == 'mobile'}"><a ng-click="sele='mobile'">Mobile</a></li>
+								<li class="list-group-item" ng-class="{active: sele == 'empresariais'}"><a ng-click="sele='empresariais'">Empresariais</a></li>
 
 							</ul>
 							<!-- /INLINE NAV -->
 							
 						</div>
 
-						<div class="col-md-9">
-							<p><strong>Inline navigation</strong>. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Vestibulum ante ipsum primis in faucibus orci.</p>
-							<p>Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+						<div class="col-md-9" ng-show="sele == 'startups'">
+							<p><strong>Pivotando um novo produto</strong> é um cenário de incerteza e experimentação, talvez a idéia inicial não seja tão boa e durante o desenvolvimento precisamos mudar bastante o plano inicial. Esse é um cenário comum quando estamos criando algo novo. Para isso não podemos nos apegar a um espoco pré definido, precisamos ter flexibilidade para mudar e experimentar.</p>
+							<p>Trabalhando nesses casos é nossa especialidade, preferimos lidar com a incerteza e a mudança á lutar contra ela. Nesse modelo de trabalho, definimos um <b>timebox</b> quinzenal no qual planejamos o que iremos desenvolver considerando sua prioridade e o que irá agregar maior valor ao produto. Ao fim desse timebox, entregamos software funcionando e utilizável, e não apenas um monte de peças desconexas.</p>
+						</div>
+
+					<div class="col-md-9" ng-show="sele == 'produto'">
+							<p><strong>Concretizando uma idéia bem definida</strong>. Quando você tem uma idéia bem definida e concreta a melhor solução pode ser desenvolver o projeto em um escopo fechado em bem claro. Assim temos a oportunidade de definir desde o início a melhor maneira de modelar e arquiteturar o produto.</p>
+							<p>Nesse modelo de trabalho temos um escopo com a lista de features bem definidas e orçadas. Assim sabemos bem o tempo estimado de conclusão e o custo envolvido no desenvolvimento do projeto desde cedo.</p>
+						</div>
+
+					<div class="col-md-9" ng-show="sele == 'mobile'">
+							<p><strong>Trazendo o mundo ao mobile</strong>. Transformar um site em responsivo, desenvolver um app customizado da sua empresa, esses são cenários comuns nos dias de hoje. Temos idéias claras e um objetivo bem definido. Nesses cenários um projeto bem definido funciona muito bem.</p>
+							<p>Quando temos envolvido a criação de um novo app, que deseja criar uma nova experiencia, uma ideía inovadora aí sim temos que trabalhar com a incerteza e abraçar a mudança. Trabalhado com um escopo aberto e contrato flexível, sujeito a mudanças de escopo repentinas.</p>
+						</div>
+
+					<div class="col-md-9" ng-show="sele == 'empresariais'">
+							<p><strong>Otimizando seus processos</strong>. Você tem um processo que deseja automatizar/informatizar, para isso nossa equipe realiza um levantamento de toda as etapas envolvidas e juntos definimos um modelo para a automatização desse processo.</p>
+							<p>Os resultados de um processo automatizado e inteligente são inúmeros, redução de custos, de erros, aumento de produtividade, etc. Desenvolvendo um produto desses exige não apenas qualidades técnicas, mas sim de entendimento e análise do negócio por trás. Nesses casos nossa equipe é alocada para realizar toda a análise do processo e surgir com um <b>roadmap</b> das funcionalidades do produto, para aí, começarmos a desenvolver.</p>
+							<p>É claro que mudanças são mais do que esperadas, pois conforme desenvolvemos e vemos o software funcionando temos a real noção de que queremos. Por isso nesse modelo o ideal é a contratação do período de análise completo em escopo fechado, e o desenvolvimento do software em escopo aberto e variável.</p>
 						</div>
 
 					</div>
