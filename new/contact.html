@@ -24,42 +24,41 @@
 
 						<!-- FORM -->
 						<div class="col-md-8">
-
-							<h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
-
-							<form id="contactForm" action="php/contact.php" method="post">
+							
+                            <h2 ng-show="msgEnviada">Mensagem Enviada! Em breve retornaremos.</h2>
+							<form id="contactForm" ng-submit="sendMail()" method="post">
 								<div class="row">
 									<div class="form-group">
 										<div class="col-md-6">
-											<label>Full Name *</label>
-											<input required type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="contact_name" id="contact_name">
+											<label>Nome Completo *</label>
+											<input required type="text" ng-model="msg.name" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="contact_name" id="contact_name">
 										</div>
 										<div class="col-md-6">
-											<label>E-mail Address *</label>
-											<input required type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="contact_email" id="contact_email">
+											<label>E-mail *</label>
+											<input required type="email" ng-model="msg.email" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="contact_email" id="contact_email">
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group">
 										<div class="col-md-12">
-											<label>Subject</label>
-											<input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="contact_subject" id="contact_subject">
+											<label>Assunto</label>
+											<input type="text" ng-model="msg.subject" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="contact_subject" id="contact_subject">
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group">
 										<div class="col-md-12">
-											<label>Message *</label>
-											<textarea required maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="contact_comment" id="contact_comment"></textarea>
+											<label>Mensagem *</label>
+											<textarea required maxlength="5000" ng-model="msg.text" data-msg-required="Please enter your message." rows="10" class="form-control" name="contact_comment" id="contact_comment"></textarea>
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-12">
 										<input class="hidden" type="text" name="captcha" id="captcha" value="" /><!-- keep it hidden -->
-										<input type="submit" value="Send Message" class="btn btn-primary btn-lg" id="contact_submit" />
+										<input type="submit" value="Enviar" class="btn btn-primary btn-lg" id="contact_submit" ng-submit="sendMail()"/>
 									</div>
 								</div>
 							</form>
@@ -68,7 +67,7 @@
 						<!-- /FORM -->
 
 
-						<!-- INFO -->
+						<!-- INFO
 						<div class="col-md-4">
 
 							<h2>Visit Us</h2>
@@ -77,7 +76,7 @@
 								Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.
 							</p>
 
-							<div class="divider half-margins"><!-- divider --></div>
+							<div class="divider half-margins"><!-- divider /div>
 
 							<p>
 								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> Street Name, City Name, Country</span>
@@ -85,7 +84,7 @@
 								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></span>
 							</p>
 
-							<div class="divider half-margins"><!-- divider --></div>
+							<div class="divider half-margins"><!-- divider</div>
 
 							<h4 class="font300">Business Hours</h4>
 							<p>
@@ -95,7 +94,7 @@
 							</p>
 
 						</div>
-						<!-- /INFO -->
+     /INFO -->
 
 					</div>
 
